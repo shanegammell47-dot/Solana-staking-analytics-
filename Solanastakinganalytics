@@ -1,0 +1,44 @@
+# SolanaStakingAnalytics
+
+**Secure staking dashboard for Solana users with Ledger integration and multi-chain analytics.**
+
+## 🌐 Live Site
+[solanastakinganalytics.vercel.app](https://solanastakinganalytics.vercel.app)
+
+## 📄 Grant Proposal
+[View Proposal PDF](https://solanastakinganalytics.vercel.app/proposal.pdf)
+
+## 🧩 Features
+- Real-time staking rewards and APY tracking
+- Validator performance and governance analytics
+- Secure Clear Signing with Ledger Wallet API
+- Multi-chain support (Solana + Tron)
+- Monetization via swap fees and premium analytics
+
+## 📦 Tech Stack
+- **Frontend:** React / Next.js
+- **Backend:** Node.js, Solana Web3.js
+- **Wallet:** Ledger integration
+- **Hosting:** Vercel (Free Hobby Plan)
+
+## 🖼️ Branding Assets
+- App Icon: `https://solanastakinganalytics.vercel.app/icon.png`
+- Favicon (light): `https://solanastakinganalytics.vercel.app/favicon.png`
+- Favicon (dark): `https://solanastakinganalytics.vercel.app/favicon-dark.png`
+
+## 📅 Roadmap
+| Month | Milestone |
+|-------|-----------|
+| 1–2   | Solana RPC + Ledger integration |
+| 3     | Dashboard live with staking analytics |
+| 4     | Governance tracking module |
+| 5     | Beta release and feedback |
+| 6     | Launch in Ledger Discover catalog |
+
+## 🧑‍💻 Founder
+**Shane** — Blockchain developer with expertise in TronWeb, Solidity, Node.js, and wallet APIs.
+
+## 📬 Contact
+- Email: [your-email@example.com]
+- Twitter: [@yourhandle]
+- GitHub: [github.com/yourusername]
