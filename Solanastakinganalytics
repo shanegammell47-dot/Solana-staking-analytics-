@@ -186,4 +186,29 @@ export default function Contact() {
     </div>
   );
 }
+`json
+{
+  "id": "solana-staking-analytics",
+  "name": "Solana Staking Analytics",
+  "description": "Stake SOL and view rewards securely with Ledger signer integration.",
+  "homepage": "https://SolanaStakingAnalytics.com",
+  "icon": "https://SolanaStakingAnalytics.com/icon.png",
+  "platforms": ["desktop", "mobile"],
+  "categories": ["staking", "analytics"],
+  "api": {
+    "wallet": true,
+    "network": "solana-mainnet"
+  },
+  "permissions": {
+    "signTransaction": true,
+    "readAccount": true
+  },
+  "branding": {
+    "favicons": {
+      "light": "https://SolanaStakingAnalytics.com/favicon.png",
+      "dark": "https://SolanaStakingAnalytics.com/favicon-dark.png"
+    }
+  }
+}
+`
 
