@@ -15,6 +15,151 @@ SolanaStakingAnalytics/
 {
   "id": "solana-staking-analytics",
   "name": "Solana Staking Analytics",
+import { useState } from 'react';
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Contact form submitted:', formData);
+    alert('Message sent! Check the console for your submission.');
+    setFormData({ name: '', email: '', message: '' });
+  };
+
+  return (
+    <div style={{
+      fontFamily: 'Arial, sans-serif',
+      backgroundColor: '#f9fafb',
+      minHeight: '100vh'
+    }}>
+
+      {/* Navigation Bar */}
+      <nav style={{
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '30px',
+        padding: '20px',
+        backgroundColor: '#1a202c',
+        color: '#fff',
+        fontWeight: 'bold'
+      }}>
+        <a href="/" style={{ color: '#fff', textDecoration: 'none' }}>Home</a>
+        <a href="/proposal.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Proposal</a>
+        <a href="https://github.com/yourusername/SolanaStakingAnalytics" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>GitHub</a>
+        <a href="/about" style={{ color: '#fff', textDecoration: 'none' }}>About</a>
+        <a href="/contact" style={{ color: '#fff', textDecoration: 'none' }}>Contact</a>
+      </nav>
+
+      {/* Main Content */}
+      <div style={{ textAlign: 'center', padding: '50px' }}>
+        <h1 style={{ color: '#2d3748' }}>Contact</h1>
+        <p style={{
+          fontSize: '18px',
+          color: '#4a5568',
+          maxWidth: '600px',
+          margin: '20px auto'
+        }}>
+          Have questions, feedback, or partnership ideas?  
+          Send a message below — I’d love to hear from you.
+        </p>
+
+        {/* Contact Form */}
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            maxWidth: '500px',
+            margin: '40px auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '20px'
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            style={{
+              padding: '12px',
+              borderRadius: '6px',
+              border: '1px solid #cbd5e0',
+              fontSize: '16px'
+            }}
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            style={{
+              padding: '12px',
+              borderRadius: '6px',
+              border: '1px solid #cbd5e0',
+              fontSize: '16px'
+            }}
+          />
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows="5"
+            style={{
+              padding: '12px',
+              borderRadius: '6px',
+              border: '1px solid #cbd5e0',
+              fontSize: '16px'
+            }}
+          />
+
+          <button
+            type="submit"
+            style={{
+              padding: '12px',
+              backgroundColor: '#6366f1',
+              color: '#fff',
+              borderRadius: '6px',
+              border: 'none',
+              fontSize: '16px',
+              fontWeight: 'bold',
+              cursor: 'pointer'
+            }}
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      {/* Footer */}
+      <footer style={{
+        textAlign: 'center',
+        marginTop: '60px',
+        fontSize: '14px',
+        color: '#718096'
+      }}>
+        © {new Date().getFullYear()} SolanaStakingAnalytics — Built by Shane
+      </footer>
+    </div>
+  );
+}
+
 # SolanaStakingAnalytics
 
 **Secure staking dashboard for Solana users with Ledger integration and multi-chain analytics.**
