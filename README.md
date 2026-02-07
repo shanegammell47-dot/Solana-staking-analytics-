@@ -165,10 +165,10 @@ export default function Contact() {
 **Secure staking dashboard for Solana users with Ledger integration and multi-chain analytics.**
 
 ## 🌐 Live Site
-[solanastakinganalytics.vercel.app](https://solanastakinganalytics.vercel.app)
+[solanastakinganalytics.com](https://solanastakinganalytic.com))
 
 ## 📄 Grant Proposal
-[View Proposal PDF](https://solanastakinganalytics.vercel.app/proposal.pdf)
+[View Proposal PDF](https://solanastakinganalytics.com/proposal.pdf)
 
 ## 🧩 Features
 - Real-time staking rewards and APY tracking
@@ -263,58 +263,7 @@ export default function Contact() {
         </p>
 
         {/* Contact Form */}
-        <form
-          onSubmit={handleSubmit}
-          style={{
-            maxWidth: '500px',
-            margin: '40px auto',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '20px'
-          }}
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            style={{
-              padding: '12px',
-              borderRadius: '6px',
-              border: '1px solid #cbd5e0',
-              fontSize: '16px'
-            }}
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            style={{
-              padding: '12px',
-              borderRadius: '6px',
-              border: '1px solid #cbd5e0',
-              fontSize: '16px'
-            }}
-          />
-
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows="5"
-            style={{
-              padding: '12px',
-              borderRadius: '6px',
-              border: '1px solid #cbd5e0',
-              fontSize: '16px'
+        
             }}
           />
 
@@ -333,15 +282,6 @@ export default function Contact() {
           >
             Send Message
           </button>
-        </form>
-      </div>
-
-      {/* Footer */}
-      <footer style={{
-        textAlign: 'center',
-        marginTop: '60px',
-        fontSize: '14px',
-        color: '#718096'
       }}>
         © {new Date().getFullYear()} SolanaStakingAnalytics — Built by Shane
       </footer>
@@ -373,7 +313,7 @@ export default function Contact() {
   }
 }
 `
-https://solanastakinganalytics.vercel.app/proposal.pdfhttps://solanastakinganalytics.vercel.apphttps://solanastakinganalytics.vercel.app/favicon.pnghttps://solanastakinganalytics.vercel.app/favicon-dark.pnghttps://solanastakinganalytics.vercel.app/icon.png
+https://solanastakinganalytics.com
   "description": "Stake SOL and view rewards securely with Ledger signer integration.",
   "homepage": "https://SolanaStakingAnalytics.com",
   "icon": "https://SolanaStakingAnalytics.com/icon.png",
@@ -482,5 +422,117 @@ $50,000 grant to support:
 SolanaStakingAnalytics will deliver a secure, transparent, and user-friendly staking dashboard for Solana users. With support from the Solana Foundation, we’ll accelerate adoption, strengthen governance, and showcase Solana’s leadership in staking analytics.
 
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolanaStakingAnalytics - Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #0b0e11; color: #ffffff; }
+        .solana-gradient { background: linear-gradient(90deg, #9945FF, #14F195); }
+    </style>
+</head>
+<body class="p-6">
+
+    <header class="flex justify-between items-center mb-10 border-b border-gray-800 pb-4">
+        <div>
+            <h1 class="text-2xl font-bold tracking-tight">SolanaStaking<span class="text-[#14F195]">Analytics</span></h1>
+            <p class="text-gray-400 text-sm">Ledger Connected: <span class="text-green-400">8x...vE2r</span></p>
+        </div>
+        <button class="solana-gradient px-6 py-2 rounded-lg font-semibold text-black hover:opacity-90 transition">
+            Sync Wallet
+        </button>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+            <h3 class="text-gray-400 text-sm">Total Staked SOL</h3>
+            <p class="text-3xl font-bold">1,240.50</p>
+            <span class="text-green-400 text-sm">≈ $124,050.00 USD</span>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+            <h3 class="text-gray-400 text-sm">Current APY</h3>
+            <p class="text-3xl font-bold">6.8%</p>
+            <span class="text-purple-400 text-sm">+0.2% from last epoch</span>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+            <h3 class="text-gray-400 text-sm">Unclaimed Rewards</h3>
+            <p class="text-3xl font-bold">14.22 SOL</p>
+            <span class="text-blue-400 text-sm">Epoch 562 in progress</span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+            <h3 class="mb-4 font-semibold">Staking Rewards Growth</h3>
+            <canvas id="rewardsChart" height="200"></canvas>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+            <h3 class="mb-4 font-semibold">Top Validators Insights</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm">
+                    <thead class="text-gray-500 border-b border-gray-800">
+                        <tr>
+                            <th class="pb-2">Validator</th>
+                            <th class="pb-2">Uptime</th>
+                            <th class="pb-2">Fee</th>
+                            <th class="pb-2">Health</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr>
+                            <td class="py-3">Jito Foundation</td>
+                            <td>99.9%</td>
+                            <td>5%</td>
+                            <td><span class="text-green-400">● Stable</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">Chorus One</td>
+                            <td>99.8%</td>
+                            <td>8%</td>
+                            <td><span class="text-green-400">● Stable</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">Ledger by Figment</td>
+                            <td>100%</td>
+                            <td>10%</td>
+                            <td><span class="text-green-400">● Optimal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('rewardsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Epoch 557', 'Epoch 558', 'Epoch 559', 'Epoch 560', 'Epoch 561'],
+                datasets: [{
+                    label: 'SOL Rewards',
+                    data: [12.1, 12.5, 13.2, 13.8, 14.2],
+                    borderColor: '#14F195',
+                    backgroundColor: 'rgba(20, 241, 149, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { grid: { color: '#2d3748' }, ticks: { color: '#a0aec0' } },
+                    x: { grid: { display: false }, ticks: { color: '#a0aec0' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
 
 
